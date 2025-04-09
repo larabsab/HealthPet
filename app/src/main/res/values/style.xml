@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo do texto "New User? Sign Up" -->
+    <style name="new_user_si">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#73665C</item>
+    </style>
+
+    <!-- Estilo do botão "Get Started", se quiser usar por textAppearance também -->
+    <style name="get_started_button_text">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+    </style>
+
+</resources>

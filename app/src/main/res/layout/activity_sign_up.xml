@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Botões para escolher tipo de cadastro -->
+        <Button
+            android:id="@+id/btnTutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sou Tutor" />
+
+        <Button
+            android:id="@+id/btnPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sou Pet"
+            android:layout_marginTop="12dp" />
+
+        <!-- Formulário de Tutor -->
+        <LinearLayout
+            android:id="@+id/tutorForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="24dp">
+
+            <EditText
+                android:id="@+id/tutorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Tutor"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/tutorEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/tutorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha (mínimo 6 caracteres)"
+                android:inputType="textPassword"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btnTutorRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar Tutor"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+        <!-- Formulário de Pet -->
+        <LinearLayout
+            android:id="@+id/petForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="24dp">
+
+            <EditText
+                android:id="@+id/petName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Pet"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/petBreed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Raça"
+                android:inputType="textPersonName"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/tutorEmailPet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email do Tutor"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btnPetRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar Pet"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLoginRedirect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Já tem uma conta? Faça login"
+            android:textColor="#007BFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

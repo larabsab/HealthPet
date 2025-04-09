@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26.61dp"
+            android:src="@drawable/ic_pet_logo"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="start"/>
+
+        <!-- Sign In Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textSize="48sp"
+            android:textColor="#324B49"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/mulish_extrabold"/>
+
+        <!-- Botões Sociais em Linha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="45dp"
+            android:weightSum="10">
+
+            <!-- Botão do Google -->
+            <LinearLayout
+                android:id="@+id/googleLogin"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button2"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_google"
+                            android:contentDescription="Google Icon"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="With Google"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/mulish_medium"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or with Email"
+            android:textColor="#444444"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/mulish_regular"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:hint="Your Email"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/mulish_regular"
+            android:textSize="16sp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="#000000"
+            android:textColorHint="#999999"/>
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:fontFamily="@font/mulish_medium"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot?"
+            android:textColor="#324B49"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/mulish_bold"/>
+
+        <!-- Get Started Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Get Started"
+            android:textSize="24sp"
+            android:layout_marginTop="104dp"
+            android:textColor="#ffff"
+            android:fontFamily="@font/mulish_bold"
+            app:backgroundTint="@null"
+            android:background="@drawable/rounded_button2"/>
+
+        <!-- Sign Up Text -->
+        <TextView
+            android:id="@+id/signUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Don’t have an account? Sign Up"
+            android:textColor="#324B49"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>
