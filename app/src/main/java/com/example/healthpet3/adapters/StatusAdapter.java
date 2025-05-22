@@ -41,9 +41,6 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
         holder.vetNameTextView.setText(status.getVetName());
         holder.timeTextView.setText(TimeUtils.getRelativeTime(status.getTimestamp()));
 
-//        holder.timeTextView.setText(status.getFormattedTime()); // certifique-se que existe esse método
-        // Imagem circular com fundo A9D8D6 já no XML (use ImageView de ícone aqui se tiver)
-
         holder.moreButton.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.CustomAlertDialog);
             View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_status_details, null);
