@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_white"
+    android:elevation="8dp"
+    android:padding="20dp"
+    android:layout_margin="16dp"
+    android:dividerPadding="8dp">
+
+    <!-- Tipo do atendimento -->
+    <TextView
+        android:id="@+id/detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🐾 Tipo de Atendimento"
+        android:textSize="18sp"
+        android:textColor="#4B4B4B"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFE0E0"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/detailStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🩺 Status: Realizado"
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:fontFamily="@font/mulish_regular" />
+
+    <!-- Veterinário -->
+    <TextView
+        android:id="@+id/detailVet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="👩‍⚕️ Veterinário: Dra. Paula Martins"
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:fontFamily="@font/mulish_regular"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Data -->
+    <TextView
+        android:id="@+id/detailTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📅 Data: 08/05/2025"
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:fontFamily="@font/mulish_regular"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Descrição -->
+    <TextView
+        android:id="@+id/detailFullText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💬 Observações: Pet estava calmo e colaborativo. Aplicada vacina V10 com sucesso."
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:fontFamily="@font/mulish_regular"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="24dp"-->
+<!--    android:background="@drawable/rounded_white"-->
+<!--    android:elevation="6dp">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/detailTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Type"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:fontFamily="@font/mulish_bold" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/detailStatus"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Status:"-->
+<!--        android:textColor="#555555"-->
+<!--        android:textSize="14sp"-->
+<!--        android:fontFamily="@font/mulish_regular"-->
+<!--        android:layout_marginTop="8dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/detailVet"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Veterinário responsável:"-->
+<!--        android:textColor="#555555"-->
+<!--        android:textSize="14sp"-->
+<!--        android:fontFamily="@font/mulish_regular"-->
+<!--        android:layout_marginTop="8dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/detailTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Data:"-->
+<!--        android:textColor="#555555"-->
+<!--        android:textSize="14sp"-->
+<!--        android:fontFamily="@font/mulish_regular"-->
+<!--        android:layout_marginTop="4dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/detailFullText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Descrição detalhada..."-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="14sp"-->
+<!--        android:fontFamily="@font/fredoka_regular"-->
+<!--        android:layout_marginTop="12dp"/>-->
+<!--</LinearLayout>-->

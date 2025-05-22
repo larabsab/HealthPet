@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--tbm n sei qual o uso desse -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_columnWeight="1"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/info_box_bg">
+
+    <TextView
+        android:id="@+id/infoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textColor="#3F2D20"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/infoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1y 4m 11d"
+        android:textColor="#3F2D20"
+        android:textSize="14sp" />
+</LinearLayout>

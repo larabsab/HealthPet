@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="16dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rectangle_2"> <!-- fundo com borda do Figma -->
+
+        <!-- Linha: imagem + nome do pet -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imagePet"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/peticon4" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textPetName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Constantino"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/mulish_semi_bold"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textVetName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_semi_bold"
+                    android:text="Dra. Leticia Ribas"
+                    android:textSize="14sp"
+                    android:textColor="#9C9C9C" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="menu"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/status1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/status_black_background"
+                android:fontFamily="@font/mulish_bold"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@android:color/black" />
+
+            <TextView
+                android:id="@+id/status2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@android:color/black"
+                android:background="@drawable/status_border_background"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/status3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@android:color/black"
+                android:background="@drawable/status_border_background"
+                android:padding="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="16dp"-->
+<!--    android:layout_marginHorizontal="16dp"-->
+<!--    app:cardCornerRadius="24dp"-->
+<!--    app:cardElevation="4dp"-->
+<!--    android:background="@android:color/white">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:background="@drawable/dashed_border"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="12dp">-->
+
+<!--        &lt;!&ndash; Pet image and name &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginBottom="8dp">-->
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/imagePet"-->
+<!--                android:layout_width="64dp"-->
+<!--                android:layout_height="64dp"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/peticon4"-->
+<!--                android:background="@drawable/circle_background"-->
+<!--                android:clipToOutline="true" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textPetName"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Nome do Pet"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@android:color/black" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Vet responsible &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/textVetName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Atualizado por Dr. Fulano"-->
+<!--            android:textColor="#666"-->
+<!--            android:textSize="14sp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:layout_marginStart="76dp" />-->
+
+
+<!--        &lt;!&ndash; Mini status cards &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginTop="12dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/status1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Sono\n2h"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:background="@drawable/status_black_background"-->
+<!--                android:padding="8dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_marginEnd="4dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/status2"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Alimentação\n5h"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:background="@drawable/status_border_background"-->
+<!--                android:padding="8dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_marginEnd="4dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/status3"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Medicação\n8h"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:background="@drawable/status_border_background"-->
+<!--                android:padding="8dp"-->
+<!--                android:visibility="gone" />-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+<!--</androidx.cardview.widget.CardView>-->

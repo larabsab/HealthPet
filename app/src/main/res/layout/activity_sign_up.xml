@@ -1,122 +1,391 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--sing up. tenho q resolver a questao do upload das fotos, a estetica dele
+e talvez mudar o genero de text p um tipo da escolha de clinica-->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#FFFFFF">
+    android:background="#F1F1F1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-        <!-- Botões para escolher tipo de cadastro -->
-        <Button
-            android:id="@+id/btnTutor"
-            android:layout_width="match_parent"
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="26.61dp"
+            android:src="@drawable/ic_pet_logo"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="start" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sou Tutor" />
+            android:text="Sign Up"
+            android:textSize="48sp"
+            android:textColor="#324B49"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/mulish_extrabold" />
 
-        <Button
-            android:id="@+id/btnPet"
+
+        <!-- Spinner escolha de tipo -->
+        <Spinner
+            android:id="@+id/spinnerTipo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sou Pet"
-            android:layout_marginTop="12dp" />
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp" />
 
-        <!-- Formulário de Tutor -->
+        <!-- Formulário Tutor -->
         <LinearLayout
             android:id="@+id/tutorForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
-            android:layout_marginTop="24dp">
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/tutorName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nome do Tutor"
-                android:inputType="textPersonName" />
+                android:hint="Name"
+                style="@style/SignUpEditText"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_edittext" />
 
             <EditText
                 android:id="@+id/tutorEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:layout_marginTop="12dp" />
+                style="@style/SignUpEditText"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_edittext" />
 
             <EditText
                 android:id="@+id/tutorPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Senha (mínimo 6 caracteres)"
+                android:hint="Password"
                 android:inputType="textPassword"
-                android:layout_marginTop="12dp" />
+                style="@style/SignUpEditText"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_edittext" />
+
+            <EditText
+                android:id="@+id/tutorPhone"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                style="@style/SignUpEditText"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_edittext" />
+
+            <Spinner
+                android:id="@+id/tutorClinic"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingHorizontal="16dp"/>
+
+            <!-- Botão para selecionar a imagem do pet -->
+            <LinearLayout
+                android:id="@+id/tutorImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button2"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/camera2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Photo Tutor"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/mulish_bold" />
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="126dp"
+                android:layout_height="126dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_border"
+                android:padding="3dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/tutorImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tutoricon2"
+                    android:background="@drawable/circle_mask"
+                    app:shapeAppearanceOverlay="@style/CircleImage"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background" />
+            </FrameLayout>
 
             <Button
                 android:id="@+id/btnTutorRegister"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cadastrar Tutor"
-                android:layout_marginTop="16dp" />
+                android:layout_height="56dp"
+                android:text="Get Started"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/mulish_bold"
+                android:layout_marginTop="24dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/rounded_button2" />
+
+            <!-- Botão Google estilizado -->
+            <LinearLayout
+                android:id="@+id/googleSignUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button2"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_google"
+                    android:contentDescription="Google Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="With Google"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/mulish_medium" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Formulário de Pet -->
+        <!-- Formulário Pet -->
         <LinearLayout
             android:id="@+id/petForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
-            android:layout_marginTop="24dp">
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/petName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nome do Pet"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/petBreed"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Raça"
-                android:inputType="textPersonName"
-                android:layout_marginTop="12dp" />
+                android:hint="Name"
+                style="@style/SignUpEditText"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_edittext" />
 
             <EditText
                 android:id="@+id/tutorEmailPet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email do Tutor"
+                android:hint="Tutor Email"
                 android:inputType="textEmailAddress"
-                android:layout_marginTop="12dp" />
+                style="@style/SignUpEditText"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_edittext" />
+
+            <EditText
+                android:id="@+id/petBreed"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:hint="Breed"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+
+            <EditText
+                android:id="@+id/petAge"
+                android:hint="Age"
+                android:inputType="number"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+
+            <EditText
+                android:id="@+id/petSpecies"
+                android:hint="Species"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+
+            <Spinner
+                android:id="@+id/petGender"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/rounded_edittext"/>
+
+            <!-- Cor do pet -->
+            <EditText
+                android:id="@+id/petColor"
+                android:hint="Color"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+
+            <!-- Altura do pet -->
+            <EditText
+                android:id="@+id/petHeight"
+                android:hint="Height (cm)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+            <!-- Peso do pet -->
+            <EditText
+                android:id="@+id/petWeight"
+                android:hint="Weight (kg)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+
+            <EditText
+                android:id="@+id/petObservations"
+                android:hint="Observations"
+                android:inputType="text"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:paddingHorizontal="16dp"
+                android:gravity="top|start"
+                style="@style/SignUpEditText"
+                android:background="@drawable/rounded_edittext" />
+
+
+<!--            <Spinner-->
+<!--                android:id="@+id/petClinic"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginHorizontal="24dp"-->
+<!--                android:background="@drawable/rounded_edittext"/>-->
+
+            <!-- Botão para selecionar a imagem do pet -->
+            <LinearLayout
+                android:id="@+id/petImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button2"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/camera2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Photo Pet"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/mulish_bold" />
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="126dp"
+                android:layout_height="126dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_border"
+                android:padding="3dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/petImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/peticon4"
+                    android:background="@drawable/circle_mask"
+                    app:shapeAppearanceOverlay="@style/CircleImage"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background" />
+            </FrameLayout>
+
 
             <Button
                 android:id="@+id/btnPetRegister"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cadastrar Pet"
-                android:layout_marginTop="16dp" />
+                android:layout_height="56dp"
+                android:text="Get Started"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/mulish_bold"
+                app:backgroundTint="@null"
+                android:background="@drawable/rounded_button2"
+                android:layout_marginTop="24dp" />
         </LinearLayout>
 
+        <!-- Link para login -->
         <TextView
             android:id="@+id/tvLoginRedirect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Já tem uma conta? Faça login"
-            android:textColor="#007BFF"
-            android:textStyle="bold"
+            android:text="Have an account? Sign In"
+            android:textColor="#324B49"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mulish_medium"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:clickable="true"
-            android:focusable="true"/>
+            android:clickable="true" />
 
     </LinearLayout>
 </ScrollView>

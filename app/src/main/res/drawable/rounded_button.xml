@@ -2,3 +2,5 @@
     <solid android:color="#b3e0db" />
     <corners android:radius="98dp" />
 </shape>
+
+<!--usado na onboarding 2 e no botao ver mais do status item do petprofile-->

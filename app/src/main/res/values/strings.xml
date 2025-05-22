@@ -8,4 +8,23 @@
     <string name="password_hint">Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="default_web_client_id">SEU_CLIENT_ID_AQUI</string>
+    <string name="no_updates">Sem atualizações</string>
+
+    <string-array name="tipo_cadastro_array">
+        <item>Selecione</item>
+        <item>Tutor</item>
+        <item>Pet</item>
+    </string-array>
+
+    <string-array name="clinic_options">
+        <item>Selecione a clínica</item>
+        <item>Clínica A</item>
+        <item>Clínica B</item>
+    </string-array>
+
+    <string-array name="gender_options">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>

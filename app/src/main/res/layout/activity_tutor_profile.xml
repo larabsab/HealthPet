@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorProfileLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.tutor.TutorProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent">
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Menu Icon -->
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/editar"
+                android:layout_gravity="start" />
+
+            <!-- Avatar -->
+            <ImageView
+                android:id="@+id/avatarImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circle_background"
+                android:padding="5dp" />
+
+            <!-- Tutor Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lara Beatriz"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp" />
+
+            <!-- Tutor Email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="larabcsabino@gmail.com"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Your Pets Section -->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="space_between|center_vertical"-->
+<!--                android:layout_marginBottom="8dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Your pets"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="See All"-->
+<!--                    android:textColor="@color/purple"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Pets Horizontal Scroll &ndash;&gt;-->
+<!--            <HorizontalScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scrollbars="none">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    &lt;!&ndash; Example Pet Card &ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:background="@drawable/pet_card_bg"-->
+<!--                        android:padding="12dp"-->
+<!--                        android:layout_marginEnd="12dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:src="@drawable/pet1"-->
+<!--                            android:layout_gravity="center" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Nala"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:layout_gravity="center" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Pit Bull Terrier\n3 years"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:textColor="#777777"-->
+<!--                            android:layout_gravity="center" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    &lt;!&ndash; Repita para outros pets... &ndash;&gt;-->
+
+<!--                </LinearLayout>-->
+<!--            </HorizontalScrollView>-->
+
+            <!-- Last Update Section -->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="space_between|center_vertical"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:layout_marginBottom="8dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Last Update"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="See All"-->
+<!--                    android:textColor="@color/purple"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+
+            <!-- Last Update Card -->
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="100dp"-->
+<!--                app:cardElevation="4dp"-->
+<!--                app:cardCornerRadius="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:gravity="center_vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:src="@drawable/pet2"-->
+<!--                            android:layout_marginEnd="12dp" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Constantino"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="14sp" />-->
+
+<!--                            <TextView-->
+<!--                                android:text="Dra. Letícia Ribas"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:textColor="#777777" />-->
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                    &lt;!&ndash; Status List &ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_marginTop="16dp"-->
+<!--                        android:gravity="center_vertical|space_between">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center"-->
+<!--                            android:background="@drawable/status_background_black"-->
+<!--                            android:padding="8dp"-->
+<!--                            android:layout_marginEnd="4dp">-->
+
+<!--                            <TextView-->
+<!--                                android:text="medication"-->
+<!--                                android:textColor="@android:color/white"-->
+<!--                                android:textSize="10sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:text="2h ago"-->
+<!--                                android:textColor="@android:color/white"-->
+<!--                                android:textSize="8sp" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash; Repetir para food e sleeping &ndash;&gt;-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+<!--    &lt;!&ndash; Bottom Navigation &ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigation"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:background="@drawable/bottom_nav_background"-->
+<!--        app:itemIconTint="@color/bottom_nav_icon"-->
+<!--        app:itemTextColor="@color/bottom_nav_icon"-->
+<!--        app:menu="@menu/bottom_nav_menu"-->
+<!--        app:labelVisibilityMode="unlabeled"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>

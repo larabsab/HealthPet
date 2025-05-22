@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--isso aqui deve ser o do item status eu acho, mas ele n ta sendo usado -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1E1E1E"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="8dp"
+    android:backgroundTint="#1E1E1E">
+
+    <TextView
+        android:id="@+id/statusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status Title"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/verMaisText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição detalhada..."
+        android:textColor="#AAAAAA"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="vertical"-->
+<!--android:padding="12dp"-->
+<!--android:background="@drawable/rounded_card_bg"-->
+<!--android:layout_marginBottom="8dp">-->
+
+<!--<TextView-->
+<!--    android:id="@+id/statusName"-->
+<!--    android:textSize="16sp"-->
+<!--    android:textStyle="bold"-->
+<!--    android:textColor="@android:color/white"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"/>-->
+
+<!--<TextView-->
+<!--    android:id="@+id/statusTime"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#AAAAAA"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"/>-->
+
+<!--<TextView-->
+<!--    android:id="@+id/statusDoctor"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#AAAAAA"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"/>-->
+<!--</LinearLayout>-->

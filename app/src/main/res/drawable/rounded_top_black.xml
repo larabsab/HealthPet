@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#121212" />
+    <corners android:topLeftRadius="40dp" android:topRightRadius="40dp"
+        android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
+</shape>
+<!--esse aqui ta sendo usado no pet profile ent ta duplicado, tenho q excluir o outro-->

@@ -1,0 +1,6 @@
+<!-- rounded_image_border.xml (no diretório drawable) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" />
+    <corners android:radius="16dp" />
+    <stroke android:color="#D1D1D1" android:width="2dp"/>
+</shape>

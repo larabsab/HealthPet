@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--é a pagina de login basicamente,
+n acho q vai ter alguma mudança pq ela ta ok, talvez so
+tennha a questao do sing up with face e do pop up do forgot
+e tbm a questao dover a senha-->
+
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -132,7 +138,10 @@
             android:layout_gravity="end"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
-            android:fontFamily="@font/mulish_bold"/>
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="14sp" />
 
         <!-- Get Started Button -->
         <Button
@@ -141,7 +150,7 @@
             android:layout_height="56dp"
             android:text="Get Started"
             android:textSize="24sp"
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="90dp"
             android:textColor="#ffff"
             android:fontFamily="@font/mulish_bold"
             app:backgroundTint="@null"
@@ -152,7 +161,7 @@
             android:id="@+id/signUpText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="24dp"
             android:text="Don’t have an account? Sign Up"
             android:textColor="#324B49"
             android:fontFamily="@font/mulish_medium"

@@ -2,3 +2,6 @@
     <solid android:color="#AAD5D1" />
     <corners android:radius="32dp" />
 </shape>
+
+
+<!--ele é usado em styles no login no sing up-->

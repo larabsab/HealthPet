@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--essa é a base do pet profile, talves eu troque a quetsao da imagem de fundo e deise so uma imagem msm ao
+inves de um png c fundo verde, o card redondinho ta bonitinho so tenho q fazer alfumas alterações-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <!-- Parte superior fixa -->
+    <FrameLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#B3E0DB">
+
+        <!-- Imagem do pet ao fundo -->
+        <ImageView
+            android:id="@+id/petImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:contentDescription="Foto do Pet"
+            android:src="@drawable/dogteste" />
+
+        <!-- Barra com botão voltar e foto do tutor por cima da imagem -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/seta2"
+                app:tint="@android:color/white"
+                android:contentDescription="Voltar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tutorProfileImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/tutoricon2"
+                android:contentDescription="Foto do Tutor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical">
+
+        <!-- Fundo com rounded top FIXO -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_top_black">
+            <ScrollView
+                android:id="@+id/scrollSection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fillViewport="true">
+                <LinearLayout
+                    android:id="@+id/bottomContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <RelativeLayout
+                        android:id="@+id/dashedBorderContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/dashed_border2">
+
+                        <LinearLayout
+                            android:id="@+id/petInfoContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentStart="true">
+
+                            <!-- Nome, raça, etc -->
+                            <TextView
+                                android:id="@+id/petNameTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nome"
+                                android:textSize="26.27sp"
+                                android:fontFamily="@font/mulish_bold"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/petBreedTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Raca"
+                                android:textSize="17.51sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/mulish_medium"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <!-- Gênero: quadrado com imagem centralizada -->
+                        <ImageView
+                            android:id="@+id/petGenderIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerInside"
+                            android:background="@drawable/gender_background_placeholder"
+                            android:padding="8dp" />
+                    </RelativeLayout>
+
+
+                    <!-- Sobre -->
+                    <LinearLayout
+                        android:id="@+id/aboutTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="start|center_vertical"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="24dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/patinha"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:id="@+id/aboutPetName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Name Pet"
+                            android:textSize="19.7sp"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="@font/mulish_bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:weightSum="4"
+                        android:paddingHorizontal="4dp">
+
+                        <!-- AGE -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/about_card_background"
+                            android:layout_margin="6dp"
+                            android:elevation="3dp"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Age"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/mulish_black"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/petAgeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1y 4m 11d"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/manrope_semibold"
+                                android:textColor="#000000"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+
+                        <!-- WEIGHT -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/about_card_background"
+                            android:layout_margin="6dp"
+                            android:elevation="3dp"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weight"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/mulish_black"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/petWeightTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9 kg"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/manrope_semibold"
+                                android:textColor="#000000"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+
+                        <!-- HEIGHT -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/about_card_background"
+                            android:layout_margin="6dp"
+                            android:elevation="3dp"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Height"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/mulish_black"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/petHeightTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="45 cm"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/manrope_semibold"
+                                android:textColor="#000000"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+
+                        <!-- COLOR -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/about_card_background"
+                            android:layout_margin="6dp"
+                            android:elevation="3dp"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Color"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/mulish_black"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/petColorTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Brown"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/manrope_semibold"
+                                android:textColor="#000000"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Status -->
+                    <LinearLayout
+                        android:id="@+id/statusTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp">
+
+                        <ImageView
+                            android:id="@+id/statusIcon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="8dp"
+                            android:contentDescription="Ícone de status"
+                            android:src="@drawable/status2" />
+
+                        <TextView
+                            android:id="@+id/statusTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_bold"
+                            android:text="Status"
+                            android:textColor="@color/white"
+                            android:textSize="19.7sp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/statusRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#121212">-->
+
+<!--    &lt;!&ndash; Fundo azul claro com imagem do pet &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/topSection"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center"-->
+<!--        android:background="#B3E0DB">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/topBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingEnd="16dp">-->
+
+<!--            &lt;!&ndash; Botão de voltar &ndash;&gt;-->
+<!--            <ImageButton-->
+<!--                android:id="@+id/buttonBack"-->
+<!--                android:layout_width="26dp"-->
+<!--                android:layout_height="26dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:src="@drawable/seta"-->
+<!--                android:contentDescription="Voltar"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--            &lt;!&ndash; Foto do tutor &ndash;&gt;-->
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/tutorProfileImage"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:src="@drawable/tutoricon2"-->
+<!--                android:contentDescription="Foto do Tutor"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/petImageView"-->
+<!--            android:layout_width="260dp"-->
+<!--            android:layout_height="260dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:background="@drawable/cachorro"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:contentDescription="Foto do Pet"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/buttonBack"/>-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; Área preta arredondada com dados do pet &ndash;&gt;-->
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/topSection"-->
+<!--        android:layout_marginTop="-80dp"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:fillViewport="true">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/bottomContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/rounded_top_black"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="24dp">-->
+
+<!--            &lt;!&ndash; Nome e raça &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/petNameTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Nala"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/petBreedTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Beagle"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#AAAAAA"-->
+<!--                android:layout_marginTop="4dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/petGenderTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Gênero"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:layout_marginTop="8dp" />-->
+
+<!--            &lt;!&ndash; Sobre &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="About Nala"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:layout_marginTop="16dp"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="16dp">-->
+
+<!--                <TextView android:id="@+id/petAgeTextView" style="@style/AboutBox" android:text="1y 4m 11d"/>-->
+<!--                <TextView android:id="@+id/petWeightTextView" style="@style/AboutBox" android:text="9 kg"/>-->
+<!--                <TextView android:id="@+id/petHeightTextView" style="@style/AboutBox" android:text="1y 4m 11d"/>-->
+<!--                <TextView android:id="@+id/petColorTextView" style="@style/AboutBox" android:text="brown"/>-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Status &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Nala’s Status"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:layout_marginBottom="8dp"/>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/statusRecyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+<!--</RelativeLayout>-->

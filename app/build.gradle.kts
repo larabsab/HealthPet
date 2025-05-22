@@ -44,6 +44,9 @@ dependencies {
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
 
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.storage)
+
     // Google Sign-In
     implementation(libs.play.services.auth)
 
@@ -54,4 +57,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
+    implementation (libs.glide)
+    annotationProcessor (libs.glide.compiler)
+
+    implementation (libs.androidx.recyclerview)
+
+    implementation(libs.circleimageview)
 }

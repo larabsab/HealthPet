@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--isso ta sendo usado de spinner no sing up, provavelmente p cor do negocio la-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner_text"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingHorizontal="16dp"
+    android:gravity="center_vertical"
+    android:textSize="16sp"
+    android:textColor="#000000"
+    android:fontFamily="@font/mulish_regular" />
+
+<!--    android:textColor="#a5a5a5"-->

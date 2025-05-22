@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" />
+    <stroke android:width="1dp" android:color="#CCCCCC" />
+    <corners android:radius="8dp" />
+</shape>
+
+<!--ele ta nos styles como um background base mas n sei se tem um uso a mais-->

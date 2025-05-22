@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.healthpet3">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -14,9 +16,10 @@
         android:theme="@style/Theme.HealthPet3"
         tools:targetApi="31">
 
+
         <!-- Tela inicial -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +27,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity" android:exported="true" />
-        <activity android:name=".OnBoarding1Activity" android:exported="true" />
-        <activity android:name=".OnBoarding2Activity" android:exported="true" />
-        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ui.login.LoginActivity" android:exported="true" />
+        <activity android:name=".ui.onboarding.OnBoarding1Activity" android:exported="true" />
+        <activity android:name=".ui.onboarding.OnBoarding2Activity" android:exported="true" />
+        <activity android:name=".ui.singnup.SignUpActivity" android:exported="true" />
+        <activity android:name=".ui.home.HomeActivity" android:exported="true" />
+        <activity android:name=".ui.pet.PetProfileActivity" android:exported="true" />
+        <activity android:name=".ui.homepet.HomePetActivity" android:exported="true" />
+        <activity android:name=".ui.tutor.TutorProfileActivity" android:exported="true" />
+        <activity android:name=".ui.tutor.EditTutorActivity" android:exported="true"/>
+        <activity android:name=".ui.pet.EditPetActivity" android:exported="true"/>
+
+
 
 
 

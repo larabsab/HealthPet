@@ -2,3 +2,6 @@
     <solid android:color="#FFFFFF" />
     <corners android:topLeftRadius="64dp" android:topRightRadius="64dp" />
 </shape>
+
+
+<!--é a borda branca do onboarding2, n vou alterar-->

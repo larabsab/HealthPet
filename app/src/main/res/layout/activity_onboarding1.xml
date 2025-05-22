@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- xml do onboarding1, mas n acho q vai ter alguma mudança-->
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#b3e0db">
@@ -27,7 +29,7 @@
         android:layout_width="164dp"
         android:layout_height="32dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/petlogo2"
+        android:src="@drawable/petlogo"
         android:contentDescription="Logo da HealthPet"
         app:layout_constraintTop_toBottomOf="@id/skipText"
         app:layout_constraintStart_toStartOf="parent"
