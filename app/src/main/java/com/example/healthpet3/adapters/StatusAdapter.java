@@ -87,4 +87,4 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.StatusView
         this.statusList = list;
         notifyDataSetChanged();
     }
-}
+} 

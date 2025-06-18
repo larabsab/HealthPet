@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/rounded_top_white"
+    android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEditTutor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Edit Tutor Info"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/mulish_bold"
+        android:background="@drawable/rounded_button2"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="false"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEditPet"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Edit Pet Info"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/mulish_bold"
+        android:background="@drawable/rounded_button2"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="false"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnChatbot"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Chatbot"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/mulish_bold"
+        android:background="@drawable/rounded_button2"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="false"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sair"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/mulish_bold"
+        android:background="@drawable/rounded_button2"
+        android:layout_marginBottom="8dp"
+        android:textAllCaps="false"/>
+</LinearLayout>

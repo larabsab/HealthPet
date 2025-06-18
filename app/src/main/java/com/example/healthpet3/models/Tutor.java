@@ -1,8 +1,9 @@
 package com.example.healthpet3.models;
 
-
+import com.google.firebase.firestore.PropertyName;
 public class Tutor {
     private String name, email, phone, clinic;
+    @PropertyName("imageUrl")
     private String imageBase64;
 
     public Tutor(){
@@ -49,10 +50,12 @@ public class Tutor {
         this.clinic = clinic;
     }
 
+    @PropertyName("imageUrl")
     public String getImageBase64() {
         return imageBase64;
     }
 
+    @PropertyName("imageUrl")
     public void setImageBase64(String imageBase64) {
         this.imageBase64 = imageBase64;
     }

@@ -13,4 +13,5 @@ public interface StorageService {
     void savePet(Pet pet, StorageCallback<String> callback);
     void getTutorByEmail(String email, StorageCallback<Tutor> callback);
     void getClinicsList(StorageCallback<java.util.List<String>> callback);
+    void uploadImage(byte[] imageData, String path, StorageCallback<String> callback);
 }

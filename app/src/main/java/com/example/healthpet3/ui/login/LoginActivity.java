@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
     private AuthManager authManager;
     private PetRepository petRepository;
     private EditText emailField, passwordField;
+    private ImageButton togglePasswordVisibility;
+    private boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,20 @@ public class LoginActivity extends AppCompatActivity {
         LinearLayout googleLogin = findViewById(R.id.googleLogin);
         emailField = findViewById(R.id.emailInput);
         passwordField = findViewById(R.id.passwordInput);
+        togglePasswordVisibility = findViewById(R.id.togglePasswordVisibility);
         Button getStartedButton = findViewById(R.id.loginButton);
         TextView signUpText = findViewById(R.id.signUpText);
         TextView forgotPasswordText = findViewById(R.id.forgotPasswordText);
+
+        togglePasswordVisibility.setOnClickListener(v -> {
+            isPasswordVisible = !isPasswordVisible;
+            int inputType = isPasswordVisible ?
+                    InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD :
+                    InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD;
+            passwordField.setInputType(inputType);
+            togglePasswordVisibility.setImageResource(isPasswordVisible ?
+                    R.drawable.ic_visibility : R.drawable.ic_visibility_off);
+        });
 
         googleLogin.setOnClickListener(v -> authManager.loginWithGoogle());
 
@@ -81,21 +95,39 @@ public class LoginActivity extends AppCompatActivity {
         inputEmail.setHint("Digite seu e-mail");
         inputEmail.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         inputEmail.setPadding(32, 48, 32, 48);
+        inputEmail.setBackgroundResource(R.drawable.rounded_edittext);
+        inputEmail.setTextColor(getResources().getColor(android.R.color.black));
+        inputEmail.setHintTextColor(getResources().getColor(android.R.color.darker_gray));
 
-        new AlertDialog.Builder(this)
+        AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Recuperar senha")
                 .setMessage("Digite seu e-mail para receber o link de recuperação:")
                 .setView(inputEmail)
-                .setPositiveButton("Enviar", (dialog, which) -> {
-                    String email = inputEmail.getText().toString().trim();
-                    if (email.isEmpty()) {
-                        showToast("O campo de e-mail está vazio");
-                        return;
-                    }
-                    authManager.sendPasswordReset(email);
-                })
+                .setPositiveButton("Enviar", null)
                 .setNegativeButton("Cancelar", null)
-                .show();
+                .create();
+
+        dialog.setOnShowListener(dialogInterface -> {
+            Button button = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+            button.setOnClickListener(view -> {
+                String email = inputEmail.getText().toString().trim();
+                if (email.isEmpty()) {
+                    showToast("Por favor, insira seu e-mail");
+                    return;
+                }
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    showToast("Por favor, insira um e-mail válido");
+                    return;
+                }
+
+                button.setEnabled(false);
+                button.setText("Enviando...");
+                authManager.sendPasswordReset(email);
+                dialog.dismiss();
+            });
+        });
+
+        dialog.show();
     }
 
     private void showErrorDialog(String title, String message) {

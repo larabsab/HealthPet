@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -31,6 +32,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -46,17 +50,20 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.storage)
+    implementation("com.google.firebase:firebase-messaging-ktx")
 
     // Google Sign-In
     implementation(libs.play.services.auth)
 
     // Facebook Login
     implementation(libs.facebook.login)
+    implementation(libs.androidx.core.ktx)
 
     // Testes
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 
 
     implementation (libs.glide)

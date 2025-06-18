@@ -37,6 +37,7 @@ import android.graphics.BitmapFactory;
 import android.util.Base64;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import com.example.healthpet3.ui.login.LoginActivity;
 
 public class SignUpActivity extends AppCompatActivity implements SignUpPresenter.SignUpView {
     private LinearLayout tutorForm, petForm;
@@ -135,6 +136,11 @@ public class SignUpActivity extends AppCompatActivity implements SignUpPresenter
 
         setupImageButtons();
         setupDatePicker();
+        TextView tvLoginRedirect = findViewById(R.id.tvLoginRedirect);
+        tvLoginRedirect.setOnClickListener(v -> {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        });
     }
 
     private void setupImageButtons() {

@@ -27,6 +27,11 @@ public class PetRepository {
         void onCallback(Pet pet);
     }
 
+    public interface UpdatePetsEmailCallback {
+        void onSuccess();
+        void onFailure(Exception e);
+    }
+
     public interface ImageCallback {
         void onCallback(String base64Image);
     }
@@ -85,9 +90,43 @@ public class PetRepository {
                 .document(tutorId)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
-                    String base64Image = documentSnapshot.getString("tutorImage");
+                    String base64Image = documentSnapshot.getString("imageUrl");
                     callback.onCallback(base64Image != null ? base64Image : "");
                 })
                 .addOnFailureListener(e -> callback.onCallback(""));
+    }
+
+    public void updatePetsTutorEmail(String oldEmail, String newEmail, UpdatePetsEmailCallback callback) {
+        db.collection("pets")
+                .whereEqualTo("tutorEmail", oldEmail)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                        doc.getReference().update("tutorEmail", newEmail);
+                    }
+                    callback.onSuccess();
+                })
+                .addOnFailureListener(callback::onFailure);
+    }
+
+    public void updatePetsClinicByTutorEmail(String tutorEmail, String newClinic, UpdatePetsEmailCallback callback) {
+        db.collection("pets")
+                .whereEqualTo("tutorEmail", tutorEmail)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                        doc.getReference().update("clinic", newClinic);
+                    }
+                    callback.onSuccess();
+                })
+                .addOnFailureListener(callback::onFailure);
+    }
+
+    public void updatePet(Pet pet, UpdatePetsEmailCallback callback) {
+        db.collection("pets")
+                .document(pet.getId())
+                .set(pet)
+                .addOnSuccessListener(aVoid -> callback.onSuccess())
+                .addOnFailureListener(callback::onFailure);
     }
 }

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F1F1F1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Botão de voltar -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/seta4"
+            app:tint="#222222"
+            android:contentDescription="Voltar"
+            android:layout_gravity="start"
+            android:layout_marginTop="24dp" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Pet"
+            android:textSize="36sp"
+            android:textColor="#324B49"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/mulish_extrabold" />
+
+        <!-- Spinner de pets -->
+        <Spinner
+            android:id="@+id/petSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp" />
+
+        <!-- Nome -->
+        <EditText
+            android:id="@+id/petName"
+            android:hint="Name"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Raça -->
+        <EditText
+            android:id="@+id/petBreed"
+            android:hint="Breed"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Idade/Data de nascimento -->
+        <EditText
+            android:id="@+id/petAge"
+            android:hint="Age/Birthdate"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Espécie -->
+        <EditText
+            android:id="@+id/petSpecies"
+            android:hint="Species"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Gênero -->
+        <Spinner
+            android:id="@+id/petGender"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp" />
+
+        <!-- Observações -->
+        <EditText
+            android:id="@+id/petObservations"
+            android:hint="Observations"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="textMultiLine"
+            android:minLines="2" />
+
+        <!-- Peso -->
+        <EditText
+            android:id="@+id/petWeight"
+            android:hint="Weight"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="numberDecimal" />
+
+        <!-- Altura -->
+        <EditText
+            android:id="@+id/petHeight"
+            android:hint="Height"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="numberDecimal" />
+
+        <!-- Cor -->
+        <EditText
+            android:id="@+id/petColor"
+            android:hint="Color"
+            style="@style/SignUpEditText"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <!-- Botão para selecionar a imagem do pet -->
+        <LinearLayout
+            android:id="@+id/petImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button2"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/camera2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photo Pet"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/mulish_bold" />
+        </LinearLayout>
+
+        <!-- Foto do pet -->
+        <FrameLayout
+            android:layout_width="126dp"
+            android:layout_height="126dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circle_border"
+            android:padding="3dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/petImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/peticon4"
+                android:background="@drawable/circle_mask"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                android:clipToOutline="true"
+                android:outlineProvider="background" />
+        </FrameLayout>
+
+        <!-- Botão salvar -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSavePet"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Changes"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_button2"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView> 

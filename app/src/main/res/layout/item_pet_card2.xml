@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dashed_border3"
+    android:padding="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp">
+
+    <TextView
+        android:id="@+id/textPetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nala"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mulish_extrabold"
+        android:textColor="#222222"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textPetBreed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pit Bull Terrier"
+        android:textSize="16sp"
+        android:textColor="#767676"
+        android:fontFamily="@font/mulish_regular"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/textPetAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 years"
+        android:textSize="16sp"
+        android:textColor="#767676"
+        android:fontFamily="@font/mulish_regular" />
+
+</LinearLayout>

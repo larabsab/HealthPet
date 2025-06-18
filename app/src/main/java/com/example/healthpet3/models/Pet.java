@@ -5,7 +5,9 @@
 
 package com.example.healthpet3.models;
 
+
 import java.util.Objects;
+import com.google.firebase.Timestamp;
 
 public class Pet {
     private String id;
@@ -21,6 +23,9 @@ public class Pet {
     private String observations;
     private String species;
     private String imageBase64;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+    private String clinic;
 
     public Pet() {}
 
@@ -139,6 +144,29 @@ public class Pet {
 
     public void setImageBase64(String imageBase64) {
         this.imageBase64 = imageBase64;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public void setClinic(String clinic) {
+        this.clinic = clinic;
+    }
+    public String getClinic() {
+        return clinic;
     }
 
     @Override

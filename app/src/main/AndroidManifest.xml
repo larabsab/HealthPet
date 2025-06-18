@@ -4,6 +4,9 @@
     package="com.example.healthpet3">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:allowBackup="true"
@@ -16,6 +19,22 @@
         android:theme="@style/Theme.HealthPet3"
         tools:targetApi="31">
 
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Default notification icon and color -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notifications" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/verdeagua" />
 
         <!-- Tela inicial -->
         <activity
@@ -37,6 +56,8 @@
         <activity android:name=".ui.tutor.TutorProfileActivity" android:exported="true" />
         <activity android:name=".ui.tutor.EditTutorActivity" android:exported="true"/>
         <activity android:name=".ui.pet.EditPetActivity" android:exported="true"/>
+        <activity android:name=".ui.notifications.StatusNotificationsActivity" />
+        <activity android:name=".ui.chatbot.ChatbotActivity" android:exported="true"/>
 
 
 

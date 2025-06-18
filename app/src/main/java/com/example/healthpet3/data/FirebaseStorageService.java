@@ -4,6 +4,10 @@ import com.example.healthpet3.models.Tutor;
 import com.example.healthpet3.models.Pet;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -77,6 +81,9 @@ public class FirebaseStorageService implements StorageService {
                     String tutorClinic = queryDocumentSnapshots.getDocuments().get(0).getString("clinic");
                     petMap.put("clinic", tutorClinic);
 
+                    // Salva o campo createdAt
+                    petMap.put("createdAt", FieldValue.serverTimestamp());
+
                     // Salva o pet com o ID gerado
                     db.collection(COLLECTION_PETS)
                             .document(petId)
@@ -120,5 +127,16 @@ public class FirebaseStorageService implements StorageService {
                     callback.onSuccess(clinicsList);
                 })
                 .addOnFailureListener(e -> callback.onError(e.getMessage()));
+    }
+
+    @Override
+    public void uploadImage(byte[] imageData, String path, StorageCallback<String> callback) {
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(path);
+        UploadTask uploadTask = storageRef.putBytes(imageData);
+        uploadTask.addOnSuccessListener(taskSnapshot -> {
+            storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                callback.onSuccess(uri.toString());
+            }).addOnFailureListener(e -> callback.onError(e.getMessage()));
+        }).addOnFailureListener(e -> callback.onError(e.getMessage()));
     }
 }

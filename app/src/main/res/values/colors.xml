@@ -12,5 +12,8 @@
     <color name="azulverde">#aad5d1</color>
     <color name="pretoclaro">#0c0c0c</color>
     <color name="greywhite">#a5a5a5</color>
+    <color name="border_color">#FF000000</color>
+    <color name="purple">#BB86FC</color>
+    <color name="teal">#03DAC5</color>
 
 </resources>

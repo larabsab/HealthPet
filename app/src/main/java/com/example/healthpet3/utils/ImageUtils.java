@@ -26,10 +26,30 @@ public class ImageUtils {
                 imageView.setImageBitmap(bitmap);
             } catch (Exception e) {
                 e.printStackTrace();
-                imageView.setImageResource(isTutorImage ? R.drawable.tutoricon2 : R.drawable.cachorrogato);
+                if (isTutorImage) {
+                    imageView.setImageResource(R.drawable.tutoricon2);
+                } else {
+                    if (imageView.getLayoutParams().width <= 100) {
+                        imageView.setImageResource(R.drawable.cachorrogato);
+                    } else { // Se for a imagem grande do perfil
+                        imageView.setImageResource(R.drawable.peticon2);
+                    }
+                }
             }
         } else {
-            imageView.setImageResource(isTutorImage ? R.drawable.tutoricon2 : R.drawable.cachorrogato);
+            if (isTutorImage) {
+                imageView.setImageResource(R.drawable.tutoricon2);
+            } else {
+                if (imageView.getLayoutParams().width <= 100) {
+                    imageView.setImageResource(R.drawable.cachorrogato);
+                } else { // Se for a imagem grande do perfil
+                    imageView.setImageResource(R.drawable.peticon2);
+                }
+            }
         }
     }
+
 }
+
+
+
