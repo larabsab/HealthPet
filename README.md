@@ -8,7 +8,7 @@ HealthPet3 é um aplicativo que permite o gerenciamento de pets e seus tutores, 
 - Cadastro e autenticação de tutores
 - Gerenciamento de perfis de pets
 - Sistema de onboarding
-- Integração com autenticação social (Google e Facebook)
+- Integração com autenticação social (Google)
 
 ## Arquitetura e Padrões
 
@@ -96,7 +96,6 @@ app/
 - Firebase Authentication
 - Firebase Firestore
 - Google Sign-In
-- Facebook Login
 - Glide para carregamento de imagens
 - RecyclerView para listas
 - Material Design Components
